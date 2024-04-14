@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax-Calculator</title>
+    <link rel="icon" href="/images/taxicon.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form name="formname">
+            <div class="uservalue">
+                <label for="gross">Enter Gross Annual Income <span id="info1" class="info">?</span><span id="infomsg1" class="infomsg">Gross Annual Income is your income in a salary without deductions</span><label>
+                <input type="text" name="gross" id="gross" placeholder="Enter Gross Annual Income" required><span id="warning-icon1" class="warning-icon" >!</span>
+            </div>
+            <div class="uservalue">
+                <label for="extra">Enter Extra Income<span id="info2" class="info">?</span><span id="infomsg2" class="infomsg">Extra Income is the income you earn from other sources</span></label>
+                <input type="text" name="extra" id="extra" placeholder="Enter Extra Income from Other Sources" required><span class="warning-icon">!</span>
+            </div>
+            <div class="uservalue">
+                <label for="age">Enter Age Group<span id="info3" class="info">?</span><span id="infomsg3" class="infomsg">Enter your current age</span></label>
+                <input type="number" id="age" name="age" min="0" required><span class="warning-icon">!</span>
+            </div>
+            <div class="uservalue">
+                <label for="deductions">Enter Total Applicable deductions<span id="info4" class="info">?</span><span id="infomsg4" class="infomsg">Enter your total applicable deductions</span></label>
+                <input type="text" name="deductions" id="deductions" placeholder="Add total applicable deductions" required><span class="warning-icon">!</span>
+            </div>
+            <div class="uservalue">
+                <input type="submit" value="Submit" id="submit">
+                <input type="reset" value="Reset" id="reset">
+            </div>
+        </form>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="tax">
+                <p id="para1">Your Overall Income Will be</p>
+                <p id="tax-value"></p>
+                <p id="para2">After Tax Deductions</p>
+            </div>
+            <button id="Close">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

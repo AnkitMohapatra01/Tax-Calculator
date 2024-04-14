@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-size: cover;
+    background-image: url(/images/pexels-tranmautritam-326508.jpg);
+}
+.container{
+    position: absolute;
+    top: 24%;
+    left: 40%;
+    height: 60vh;
+    width: 25vw;
+    background-color: white;
+    opacity: 0.9;
+    box-shadow: 0 5px 15px 5px black;
+}
+form{
+    position: relative;
+    height: 50vh;
+    width: 20vw;
+    top: 5%;
+    left: 10%;
+}
+form div{
+    position: relative;
+    margin-top: 15px;
+}
+
+form label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 550;
+    font-size: 1rem;
+}
+form input{
+    margin-top: 5px;
+    height: 4vh;
+    width: 18vw;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+    outline: none;
+}
+select option{
+    font-size: 0.9rem;
+}
+#submit,#reset,#Close{
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 30px;
+    height: 5vh;
+    width: 9.3vw;
+    border: none;
+    cursor: pointer;
+    background-color: gray;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+#tax-value{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.info{
+    opacity: 0.5;
+    text-align: center;
+    line-height: 20px;
+    font-size: 1rem;
+    border: 2px solid black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+}
+.info::selection{
+    position: absolute;
+    font-size: 40px;
+    top: -15px;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    padding: 5px;
+    margin-left: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.infomsg{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+}
+.warning-icon {
+    display: none;
+    opacity: 0.9;
+    text-align: center;
+    font-size: 1rem;
+    border: 2px solid black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: 65%;
+    transform: translateY(-50%); 
+}
+.warning-icon::after {
+    display: none;
+    content: "Please Enter Numbers only";
+    position: absolute;
+    top: -30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    white-space: nowrap; 
+    margin-left: 15px;
+}
+.warning-icon:hover::after{
+    display: block;
+}
+.modal{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 30%;
+    top: 28%;
+    width: 50vw;
+    height: 50vh;
+    overflow: auto;
+    background-color: rgba(255, 255, 255,1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 5%;
+    left: 10%;
+    height: 40vh;
+    width: 40vw;
+}
+.tax{
+    width: 100%;
+    text-align: center;
+}
+#para1{
+    font-size: 2.5rem;
+}
+#para2{
+    font-size: 1rem;
+}
+#para1 , #para2{
+    font-weight: bold;
+}
